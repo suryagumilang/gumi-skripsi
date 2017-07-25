@@ -6,3 +6,4 @@ This repository content is about my final project for getting my bachelor degree
 - Python 2.7
 - Python 2.5
 - MySQL
+- Website using php, html, javascript, css
