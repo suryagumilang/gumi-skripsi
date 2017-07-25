@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pemantauan Posisi Rangkaian Kereta Api</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="top-bar">
+			<h1>PEMANTAUAN KAI</h1>
+		</div>
+	<div class="side-bar">	
+		<div class="search">
+			<form method="GET" action="index.html">
+				<label>Filter Kereta<br>
+					<input type="text" name="kereta" class="label" placeholder="Nomor Kereta">
+				</label>
+				<br>
+				<input type="submit" value="Search">
+			</form>
+		</div>	
+	</div>
+	<div class='content-bar'>
+		<div class=content-wrapper>
+			<div class='judul'>
+				<h2>Data Kereta Api</h2>
+			</div>
+			<table class='table'>
+				<thead>
+					<tr>
+						<th colspan="3">Nama KA</th>
+						<th>No. KA</th>
+						<th>Pada Stasiun</th>
+						<th colspan='4'>Lokasi</th>
+						<th>Koordinat LS</th>
+						<th>Koordinat BT</th>
+						<th colspan='2'>Kabupaten/Kota</th>
+						<th colspan='2'>Provinsi</th>
+						<th colspan="2">Waktu</th>
+					</tr>
+				</thead>
+				<tbody id="tampildata"></tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		setInterval(function(){
+			$('#tampildata').load("tampil.php");
+		}, 1000);	
+	});
+</script>
+
+</body>
+</html>
